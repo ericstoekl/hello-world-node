@@ -1,4 +1,4 @@
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: node-hw-deployment
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: node-hw
-        image: r.cfcr.io/ericstoekl/ericstoekl/helloworldnode:master
+        image: r.cfcr.io/ericstoekl/ericstoekl/hello-world-node:master
         ports:
         - containerPort: 80
