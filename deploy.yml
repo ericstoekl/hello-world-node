@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: node-hw-deployment
+spec:
+  selector:
+    matchLabels:
+      app: node-hello-world
+  replicas: 3 # tells deployment to run 2 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: node-hello-world
+    spec:
+      containers:
+      - name: node-hw
+        image: r.cfcr.io/ericstoekl/ericstoekl/helloworldnode:master
+        ports:
+        - containerPort: 80
