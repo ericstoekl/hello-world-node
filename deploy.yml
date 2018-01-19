@@ -15,7 +15,7 @@ spec:
 kind: Deployment
 apiVersion: apps/v1beta1 # for versions before 1.9.0 use apps/v1beta2
 metadata:
-  name: node-hw-deployment
+  name: node-hello-world
   namespace: default
 spec:
   selector:
